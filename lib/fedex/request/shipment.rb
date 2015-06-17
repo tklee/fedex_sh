@@ -73,6 +73,10 @@ module Fedex
           xml.LabelFormatType @label_specification[:label_format_type]
           xml.ImageType @label_specification[:image_type]
           xml.LabelStockType @label_specification[:label_stock_type]
+          xml.PrintedLabelOrigin {
+	    xml.Contact @label_specification[:printed_label_origin_contact]
+	    xml.Address @label_specification[:printed_label_origin_address]
+	  }
         }
       end
 
